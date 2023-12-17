@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --light-blue: hsl(245, 78%, 66%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(images/pattern-background-desktop.svg);
+    background-repeat:repeat-x;
+    background-color: var(--pale-blue);
+    height: 100vh;
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+    display: grid;
+    place-content: center;
+}
+
+.container {
+    background: white;
+    max-width: 450px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container #header-pic {
+    border-radius: 1rem 1rem 0 0;
+    margin-bottom: 2rem;
+}
+
+.container h2 {
+    margin-bottom: 1rem;
+}
+
+.container .description {
+    color: var(--desaturated-blue);
+    width: 80%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.container .subscription {
+    display: flex;
+    align-items: center;
+    background: var(--very-pale-blue);
+    padding: 1.2rem;
+    width: 80%;
+    border-radius: 1rem;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.container .subscription .plan {
+    margin-left: -6rem;
+}
+
+.container .subscription .plan .annual-plan {
+    font-weight: 700;
+}
+
+.container .subscription .plan .price {
+    color: var(--desaturated-blue);
+}
+
+.container .subscription a {
+    font-weight: 700;
+}
+
+.container .subscription a:hover {
+    color: var(--light-blue);
+}
+
+.container button {
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+}
+
+.container .payment {
+    width: 80%;
+    height: 3rem;
+    border-radius: 1rem;
+    background: var(--bright-blue);
+    color: white;
+    border: none;
+    box-shadow: 0 15px 15px rgba(56, 41, 224, 0.3);
+}
+
+.container .payment:hover {
+    background: hsl(245, 78%, 66%);
+}
+
+.container .cancel {
+    width: 80%;
+    height: 2rem;
+    border: none;
+    background: transparent;
+    color: var(--desaturated-blue);
+    margin-bottom: 2rem;
+}
+
+.container .cancel:hover {
+    color: var(--dark-blue);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 430px) {
+    body {
+        background: url(images/pattern-background-mobile.svg);
+        background-repeat: repeat-x;
+        background-color: var(--pale-blue);
+    }
+    #header-pic {
+        width: 100%;
+    }
+
+    .container {
+        margin: auto;
+        width: 90%;
+    }
+    
+    .subscription {
+        font-size: 14px;
+    }
+
+    .container .subscription .plan {
+        margin-left: 0;
+    }
+}
